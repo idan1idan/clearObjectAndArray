@@ -1,27 +1,31 @@
 const object = {
+  a: "",
+  b: "1",
+  a1: {},
+  b1: {
+    a: "1",
+  },
+  a2: {
     a: "",
-    b: "1",
-    a1: {},
-    b1: {
-      a: "1",
-    },
-    a2: {
-      a: "",
-    },
-    b2: {
-      a: [],
-    },
-    c1: {
-      a: ["1"],
-    },
-    c3: {
-      a: ["1", []],
-    },
-    a3: [],
+  },
+  b2: {
+    a: [],
+  },
+  c1: {
+    a: ["1"],
+  },
+  c3: {
+    a: ["1", []],
+  },
+  a3: [],
   h: [[]],
 };
-// a3 b b1 c1 c3 h
-
+/**
+ * @author Idan Gigi
+ * @param {array} array
+ * @return {array}
+ * @description clear the array from falsy values
+ */
 const clearArray = (array) => {
   if (!array.length) {
     return array;
@@ -82,6 +86,12 @@ const clearArray = (array) => {
   }
   return array;
 };
+/**
+ * @author Idan Gigi
+ * @param {object} object
+ * @return {object}
+ * @description clear the object from falsy values
+ */
 const clearObject = (object) => {
   if (!Object.getOwnPropertyNames(object).length) {
     return object;
@@ -133,4 +143,3 @@ const clearObject = (object) => {
 };
 
 clearObject(object);
-console.log(object);
